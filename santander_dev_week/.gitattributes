@@ -1,3 +1,14 @@
-/gradlew text eol=lf
-*.bat text eol=crlf
-*.jar binary
+# Ignorar arquivos de build do Gradle
+.gradle/
+build/
+
+# Ignorar arquivos de IDE
+.idea/
+*.iml
+
+# Ignorar logs e temp files
+*.log
+tmp/
+
+# Ignorar arquivos do H2 (banco de dados em memória)
+*.h2.db

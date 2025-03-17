@@ -1,6 +1,5 @@
 package projetoDIO.santander_dev_week.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,24 +10,10 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
     private String descricao;
     private double preco;
     private int quantidade;
-
-    @Column(length = 1000)
-    private String imagemUrl;
-
-    public Produto() {}
-
-    public Produto(String nome, String descricao, double preco, int quantidade, String imagemUrl) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.preco = preco;
-        this.quantidade = quantidade;
-        this.imagemUrl = imagemUrl;
-    }
 
     // Getters e Setters
     public Long getId() { return id; }
@@ -41,6 +26,4 @@ public class Produto {
     public void setPreco(double preco) { this.preco = preco; }
     public int getQuantidade() { return quantidade; }
     public void setQuantidade(int quantidade) { this.quantidade = quantidade; }
-    public String getImagemUrl() { return imagemUrl; }
-    public void setImagemUrl(String imagemUrl) { this.imagemUrl = imagemUrl; }
 }
